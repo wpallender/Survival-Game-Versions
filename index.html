@@ -2,179 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Java Survival Game</title>
+<title>Java Survival Game Downloads</title>
 
 <style>
 
-*{
-    box-sizing:border-box;
-}
-
 body{
+    background:#dcdcdc;
+    color:#000;
+    font-family:Tahoma, Arial, sans-serif;
+    font-size:14px;
     margin:0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background:#0f0f0f;
+}
+
+#page{
+    width:800px;
+    margin:20px auto;
+    background:white;
+    border:1px solid #999;
+}
+
+#header{
+    background:#2f5fa1;
     color:white;
-    background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size:32px 32px;
+    padding:12px;
+    border-bottom:1px solid #1d3d69;
 }
 
-.header{
-    padding:70px 20px 50px;
-    text-align:center;
-    border-bottom:2px solid #1f1f1f;
-    background:linear-gradient(to bottom,#161616,#101010);
-}
-
-.header h1{
+#header h1{
     margin:0;
-    font-size:64px;
-    color:#7CFF7C;
-    text-shadow:0 0 18px rgba(124,255,124,0.35);
+    font-size:28px;
+    font-weight:normal;
 }
 
-.subtitle{
-    margin-top:14px;
-    color:#999;
-    font-size:18px;
+#header p{
+    margin:4px 0 0 0;
+    font-size:12px;
 }
 
-.links{
-    margin-top:25px;
-}
-
-.links a{
-    color:#7CFF7C;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:bold;
-    transition:.2s;
-}
-
-.links a:hover{
-    text-shadow:0 0 10px #7CFF7C;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
-
-.section-title{
-    font-size:34px;
-    margin-bottom:25px;
-    color:#fff;
+#content{
+    padding:20px;
 }
 
 .version{
-    background:#181818;
-    border:2px solid #242424;
-    border-radius:16px;
-    padding:24px;
-    margin-bottom:24px;
-    transition:.2s;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    border-bottom:1px solid #cfcfcf;
+    padding:15px 0;
 }
 
-.version:hover{
-    border-color:#7CFF7C;
-    transform:translateY(-2px);
+.version:last-child{
+    border-bottom:none;
 }
 
-.version-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.version-name{
-    font-size:32px;
-    font-weight:bold;
+.version-title{
+    font-size:22px;
+    margin-bottom:3px;
 }
 
 .release-date{
-    color:#888;
-    margin-top:4px;
-    font-size:14px;
+    color:#666;
+    font-size:12px;
+    margin-bottom:10px;
 }
 
-.latest{
-    background:#7CFF7C;
-    color:#111;
-    padding:7px 14px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:bold;
+.downloads a{
+    display:inline-block;
+    margin-right:12px;
+    color:#003399;
+    text-decoration:underline;
 }
 
-.downloads{
-    margin-top:22px;
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-.download{
-    background:#222;
-    border:2px solid #333;
-    color:white;
-    text-decoration:none;
-    padding:14px 20px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    transition:.2s;
-    font-weight:bold;
-}
-
-.download:hover{
-    background:#1d291d;
-    border-color:#7CFF7C;
-}
-
-.icon{
-    font-size:22px;
+.downloads a:hover{
+    color:#cc0000;
 }
 
 .notes{
-    margin-top:18px;
-    color:#aaa;
-    line-height:1.5;
+    margin-top:10px;
+    color:#444;
+    line-height:1.4;
 }
 
-.screenshots{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:18px;
-    margin-top:25px;
-}
-
-.screenshot{
-    background:#181818;
-    border:2px solid #242424;
-    border-radius:14px;
-    overflow:hidden;
-}
-
-.screenshot img{
-    width:100%;
-    display:block;
-}
-
-.footer{
-    text-align:center;
+#footer{
+    border-top:1px solid #cfcfcf;
+    padding:10px 20px;
+    font-size:11px;
     color:#666;
-    padding:50px 20px;
-    border-top:2px solid #1a1a1a;
-    margin-top:60px;
+    background:#f2f2f2;
 }
 
 </style>
@@ -182,142 +93,153 @@ body{
 
 <body>
 
-<div class="header">
+<div id="page">
 
-    <h1>Java Survival Game</h1>
+    <div id="header">
 
-    <div class="subtitle">
-        Experimental Java sandbox survival game by Bytecraft
+        <h1>Java Survival Game</h1>
+
+        <p>
+            Sandbox survival game written in Java.
+        </p>
+
     </div>
 
-    <div class="links">
-        <a href="https://w-java-games.itch.io/java-survival-game" target="_blank">
-            itch.io
+    <div id="content">
+
+        <!-- NEWEST VERSION -->
+<div class="version">
+
+    <div class="version-top">
+
+        <div>
+            <div class="version-name">Alpha V0.0.3</div>
+            <div class="release-date">Released May 20, 2026</div>
+        </div>
+
+        <div class="latest">LATEST</div>
+
+    </div>
+
+    <div class="downloads">
+
+        <a class="download"
+        href="downloads/AlphaV0.0.3.jar"
+        download>
+
+            AlphaV0.0.3.jar
+
         </a>
 
-        <a href="https://github.com/" target="_blank">
-            GitHub
+
+        <a class="download"
+        href="downloads/AlphaV0.0.3.zip"
+        download>
+
+            AlphaV0.0.3.zip
+
         </a>
+
+    </div>
+
+    <div class="notes">
+        Improved terrain generation, chunk loading fixes,
+        and general optimization improvements.
     </div>
 
 </div>
 
-<div class="container">
-
-    <div class="section-title">Downloads</div>
 
 
-    <!-- NEWEST VERSION -->
-    <div class="version">
+<!-- OLD VERSION -->
+<div class="version">
 
-        <div class="version-top">
+    <div class="version-top">
 
-            <div>
-                <div class="version-name">v0.3</div>
-                <div class="release-date">Released May 21, 2026</div>
-            </div>
-
-            <div class="latest">LATEST</div>
-
-        </div>
-
-        <div class="downloads">
-
-            <a class="download"
-            href="downloads/JavaSurvivalGame_v0.3.jar"
-            download>
-
-                <div class="icon">☕</div>
-                Download JAR
-
-            </a>
-
-
-            <a class="download"
-            href="downloads/JavaSurvivalGame_v0.3.zip"
-            download>
-
-                <div class="icon">🪟</div>
-                Download ZIP
-
-            </a>
-
-        </div>
-
-        <div class="notes">
-            Improved terrain generation, chunk loading fixes,
-            and general optimization improvements.
+        <div>
+            <div class="version-name">Alpha V0.0.2</div>
+            <div class="release-date">Released May 19, 2026</div>
         </div>
 
     </div>
 
+    <div class="downloads">
+
+        <a class="download"
+        href="downloads/AlphaV0.0.2.jar"
+        download>
+
+            AlphaV0.0.2.jar
+
+        </a>
 
 
-    <!-- OLD VERSION -->
-    <div class="version">
+        <a class="download"
+        href="downloads/AlphaV0.0.2.zip"
+        download>
 
-        <div class="version-top">
+            AlphaV0.0.2.zip
 
-            <div>
-                <div class="version-name">v0.2</div>
-                <div class="release-date">Released May 17, 2026</div>
-            </div>
-
-        </div>
-
-        <div class="downloads">
-
-            <a class="download"
-            href="downloads/JavaSurvivalGame_v0.2.jar"
-            download>
-
-                <div class="icon">☕</div>
-                Download JAR
-
-            </a>
-
-
-            <a class="download"
-            href="downloads/JavaSurvivalGame_v0.2.zip"
-            download>
-
-                <div class="icon">🪟</div>
-                Download ZIP
-
-            </a>
-
-        </div>
-
-        <div class="notes">
-            Added procedural terrain generation.
-        </div>
+        </a>
 
     </div>
 
-
-
-    <div class="section-title">Screenshots</div>
-
-    <div class="screenshots">
-
-        <div class="screenshot">
-            <img src="images/screenshot1.png">
-        </div>
-
-        <div class="screenshot">
-            <img src="images/screenshot2.png">
-        </div>
-
-        <div class="screenshot">
-            <img src="images/screenshot3.png">
-        </div>
-
+    <div class="notes">
+        Added procedural terrain generation.
     </div>
 
 </div>
 
-<div class="footer">
-    Made with Java • Updated Frequently • Bytecraft
+
+
+<div class="version">
+
+    <div class="version-top">
+
+        <div>
+            <div class="version-name">Alpha V0.0.1</div>
+            <div class="release-date">Released May 17, 2026</div>
+        </div>
+
+    </div>
+
+    <div class="downloads">
+
+        <a class="download"
+        href="downloads/AlphaV0.0.1.jar"
+        download>
+
+            AlphaV0.0.1.jar
+
+        </a>
+
+
+        <a class="download"
+        href="downloads/AlphaV0.0.1.zip"
+        download>
+
+            AlphaV0.0.1.zip
+
+        </a>
+
+    </div>
+
+    <div class="notes">
+        First public build.
+    </div>
+
+</div>
+    </div>
+
+    <div id="footer">
+
+        Hosted on GitHub Pages |
+        <a href="https://w-java-games.itch.io/java-survival-game">
+            itch.io page
+        </a>
+
+    </div>
+
 </div>
 
 </body>
